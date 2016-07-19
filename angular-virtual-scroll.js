@@ -31,7 +31,8 @@
               if (scope.virtualRepeat.maxSize - scope.virtualRepeat.range.end < scope.virtualRepeat.INCREMENT_SIZE) {
                 scope.virtualRepeat.range.end = scope.virtualRepeat.maxSize;
               }
-              moveScrollTo(element[0].scrollHeight/3);
+              var position = element.find('>[data-ng-repeat]').eq(scope.virtualRepeat.ITEMS_SIZE - scope.virtualRepeat.INCREMENT_SIZE - 1).position().top || 0;
+              moveScrollTo(position);
             }
           }
           if (angular.element(this).scrollTop() <= 10) {
@@ -42,7 +43,8 @@
               }
               scope.virtualRepeat.range.start -= scope.virtualRepeat.INCREMENT_SIZE;
               scope.virtualRepeat.range.end -= scope.virtualRepeat.INCREMENT_SIZE;
-              moveScrollTo(element[0].scrollHeight/2); 
+              var position = element.find('>[data-ng-repeat]').eq(scope.virtualRepeat.INCREMENT_SIZE).position().top || 0;
+              moveScrollTo(position); 
             }
           }
         };
