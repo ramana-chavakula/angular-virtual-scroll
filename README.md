@@ -1,5 +1,6 @@
 # angular-virtual-scroll
-just include angularVirtualScroll as dependency to your module say
+
+use ``bower install angular-virtualScroll`` and just include angularVirtualScroll as dependency to your module say
 
 ```
 var app = angular.module("sampleApp", ["angularVirtualScroll"]);
