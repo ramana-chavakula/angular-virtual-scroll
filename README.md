@@ -31,8 +31,8 @@ and define virtualRepeat options in controller say
 
 **ITEMS_SIZE** is the count of items say in dom at a time say from our example you can view 10 items at time.
 
-**INCREMENT_SIZE** is the buffered count of items we maintain ie., we we scroll down we will add 5 items at the bottom and remove 5 items at the top vice versa we we reach top.
+**INCREMENT_SIZE** is the buffered count of items we maintain ie., when we scroll down we will add 5 items at the bottom and remove 5 items at the top vice versa as we scroll top.
 
-**range** is what we used internally to maintain the virtual scroll but i am exposing range because you can reset the virtual scroll postion manually using this range object in virtualRepeat options.
+**range** is what we used internally to maintain the virtual scroll but I am exposing range because we can reset the virtual scroll postion manually using this range object in virtualRepeat options.
 
 **Example** ``range: {start: 5, end: 15}`` which means you can view the items starting from index 5 to 15.
